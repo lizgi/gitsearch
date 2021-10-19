@@ -1,0 +1,63 @@
+.panel-body {
+  border: 10px;
+
+}
+
+.pp {
+  font-family: 'Courier Prime', monospace;
+}
+
+search-form {
+  padding-top: 60px;
+}
+
+.ppp {
+  text-align: center;
+}
+
+.pipe {
+  font-size: 20px;
+ 
+}
+
+.login {
+  font-size: 20px;
+  
+}
+
+
+
+
+.profile-align {
+  margin-left: 150px;
+}
+
+.form-group {
+
+  display: flex;
+  position: fixed;
+  width: 35vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 80px;
+}
+
+.profile-details {
+  display: flex;
+  height: 300px;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-details img {
+  padding-right: 2rem;
+  width: 200px;
+  height: 200px;
+  left: 40px;
+}
+.card-body{
+  background-color: rgb(218, 218, 218);
+  border-bottom:3px solid rgb(255, 253, 253);
+}

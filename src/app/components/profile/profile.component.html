@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Git-Search</title>
+</head>
+
+<body>
+  <h1>Git-Search</h1>
+  <div class="row mt-5">
+    <form action="" class="search-form" (ngSubmit)='findProfile()'>
+      <div class="col-md-12"></div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search github user" [(ngModel)]="username" name="username">
+        <button type="submit" class="btn btn-primary">SEARCH</button>
+      </div>
+    </form>
+
+
+  </div>
+  <div *ngIf='profile'>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-md-6">
+        <h2 style="position: fixed; left: 100px;"> User</h2>
+
+        <div class="profile-details ml-5" style="position: fixed;">
+          <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+          <div class="prof-details">
+            <p class="login">Username: {{profile.login}}</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h2 class="text-success">{{profile.login}} Repositories</h2>
+        <div class="" *ngFor="let repo of repos ">
+          <div appCardHover class="card">
+            <div appCardHover class="card-body">
+              <h3 class="card-title">{{repo.name}}</h3>
+              <p class="card-text">{{repo.description}}</p>
+              <p class='pipe'>Created: {{repo.created_at|dateAgo}}</p>
+              <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">Check in Github </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

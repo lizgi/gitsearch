@@ -1,0 +1,33 @@
+<div class="container">
+  <form (ngSubmit)='searchRepos()' style="margin-top: 100px;">
+    <input type="text" name="searchname" [(ngModel)]="searchname">
+    <button type="submit" class="btn btn-primary">search repo</button>
+  </form>
+
+  <h1>List of Repositories </h1>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let repo of repos">
+      <div appCardHover class="card-body">
+        <h3><strong>Repository Name:</strong> {{repo.name}}</h3>
+        <h4><strong>Repository ID:</strong> {{repo.id}}</h4>
+
+        <p><strong>Repository Description:</strong> {{repo.description}}</p>
+
+        <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">Check in Github </a>
+      </div>
+    </div>
+
+    <div class="col-md-5 repo" *ngFor="let repo of repos">
+      <h3>{{repo.name}}</h3>
+      <h4>{{repo.id}}</h4>
+
+      <p>{{repo.description}}</p>
+
+      <a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">Check in Github </a>
+
+    </div>
+
+
+  </div>
+
+</div>
