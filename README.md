@@ -1,9 +1,12 @@
-# gitsearch
+## gitsearch
+
+This project was generated with Angular CLI version 12.2.9
+
+By ELIZABETH GIKONYO,October 2021
+
+## DESCRIPTION
+
 a website that allows one to search for github accounts,,,by use of names then it display the user avatar and the repos.,,.
-
-## DEVELOPER
-
-ELIZABETH GIKONYO
 
 ## FEATURES
 Input the github username though a form in the landing page
